@@ -1,37 +1,44 @@
-import Link from "next/link";
+"use client";
+
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/data/profile";
+import { useReducedMotion } from "@/lib/animations";
 
 /** Délais de la cascade d'apparition (badge → h1 → rôle → sous-titre → CTA). */
 const REVEAL_DELAYS = ["0ms", "0.08s", "0.16s", "0.24s", "0.32s"];
 
 export function Hero() {
   const hero = profile.hero;
+  const reduced = useReducedMotion();
   const [headlineStart, headlineEnd] = hero.headline.split(hero.highlight);
+  const availabilityWord = hero.availability.split(" ")[0];
 
   return (
     <section
       id="hero"
       className="relative flex min-h-svh flex-col overflow-hidden w-full"
     >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-[-4%] select-none text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-ink/[0.08]"
+      >
+        <span
+          className={
+            reduced
+              ? undefined
+              : "inline-block animate-[floatSlow_14s_ease-in-out_infinite]"
+          }
+        >
+          {availabilityWord}
+        </span>
+      </div>
+
       <Container className="flex flex-1 flex-col justify-center py-24 md:py-32 w-full">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center space-y-4">
-          {/* Badge de disponibilité */}
-          <p
-            className="hero-reveal inline-flex items-center gap-2.5 rounded-full border border-line bg-surface px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted"
-            style={{ animationDelay: REVEAL_DELAYS[0] }}
-          >
-            <span
-              aria-hidden
-              className="size-2 rounded-full bg-emerald-500 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]"
-            />
-            {hero.availability}
-          </p>
-
           {/* Headline de positionnement */}
           <h1
-            className="hero-reveal mt-8 font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-[1.03] tracking-[-0.03em] text-ink md:mt-10 w-full"
+            className="hero-reveal  font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-[1.03] tracking-[-0.03em] text-ink md:mt-10 w-full"
             style={{ animationDelay: REVEAL_DELAYS[1] }}
           >
             {headlineStart}
@@ -63,12 +70,11 @@ export function Hero() {
             style={{ animationDelay: REVEAL_DELAYS[4] }}
           >
             <Button href={hero.ctaPrimary.href}>{hero.ctaPrimary.label}</Button>
-            <Link
-              href={hero.ctaSecondary.href}
-              className="text-sm font-medium text-inksoft underline decoration-muted/50 underline-offset-4 transition-colors hover:text-ink hover:decoration-ink"
-            >
-              {hero.ctaSecondary.label}
-            </Link>
+            <Button href={hero.ctaSecondary.href} variant="secondary">
+              <span className="underline">
+                {hero.ctaSecondary.label}
+              </span>
+            </Button>
           </div>
         </div>
       </Container>

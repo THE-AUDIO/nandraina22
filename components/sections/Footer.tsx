@@ -7,6 +7,7 @@ import { nav } from "@/data/nav";
 import { profile } from "@/data/profile";
 import { socialsSection } from "@/data/socials";
 import { useGsapReveal, useReducedMotion } from "@/lib/animations";
+import { getLenis } from "@/lib/animations/lenis";
 
 function UnderlineLink({
   href,
@@ -37,8 +38,9 @@ export function Footer() {
   });
 
   const scrollTop = () => {
-    if (reduced) window.scrollTo({ top: 0 });
-    else window.scrollTo({ top: 0, behavior: "smooth" });
+    const lenis = getLenis();
+    if (lenis) lenis.scrollTo(0);
+    else window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
   };
 
   return (

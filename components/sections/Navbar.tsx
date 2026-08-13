@@ -14,6 +14,7 @@ import { Container } from "@/components/ui/Container";
 import { nav } from "@/data/nav";
 import { profile } from "@/data/profile";
 import { EASE, useReducedMotion } from "@/lib/animations";
+import { getLenis } from "@/lib/animations/lenis";
 import { cn } from "@/lib/utils";
 
 /** Texte à double couche : swap vertical au survol (signature Zynic). */
@@ -78,8 +79,16 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    const lenis = getLenis();
+    if (open) {
+      lenis?.stop();
+      document.body.style.overflow = "hidden";
+    } else {
+      lenis?.start();
+      document.body.style.overflow = "";
+    }
     return () => {
+      lenis?.start();
       document.body.style.overflow = "";
     };
   }, [open]);

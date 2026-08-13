@@ -1,3 +1,4 @@
+import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { MarqueeStack } from "@/components/sections/MarqueeStack";
@@ -19,23 +20,25 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <MarqueeStack />
-        <Portfolio />
-        <Stack />
-        <Method />
-        <Strengths />
-        <Distinctions />
-        <Experiences />
-        <Education />
-        <Positioning />
-        <SoftSkills />
-        <Socials />
-        <FAQ />
-        <FinalCTA />
-      </main>
-      <Footer />
+      <SmoothScroll>
+        <main>
+          <Hero />
+          <MarqueeStack />
+          <Portfolio />
+          <Stack />
+          <Method />
+          <Strengths />
+          <Distinctions />
+          <Experiences />
+          <Education />
+          <Positioning />
+          <SoftSkills />
+          <Socials />
+          <FAQ />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </SmoothScroll>
     </>
   );
 }
