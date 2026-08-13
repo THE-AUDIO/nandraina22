@@ -16,25 +16,66 @@ import { profile } from "@/data/profile";
 import { EASE, useReducedMotion } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
-const group = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
-};
-
-const groupItem = {
-  hidden: { opacity: 0, y: -10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
-};
+/** Texte à double couche : swap vertical au survol (signature Zynic). */
+function RollText({
+  label,
+  className,
+}: {
+  label: string;
+  className?: string;
+}) {
+  return (
+    <span className="relative block overflow-hidden">
+      <span
+        className={cn(
+          "block transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-full",
+          className,
+        )}
+      >
+        {label}
+      </span>
+      <span
+        aria-hidden
+        className={cn(
+          "absolute left-0 top-0 block translate-y-full transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0",
+          className,
+        )}
+      >
+        {label}
+      </span>
+    </span>
+  );
+}
 
 export function Navbar() {
   const reduced = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 16);
   });
+
+  // Scrollspy : met en surbrillance la section courante.
+  useEffect(() => {
+    const sections = nav.links
+      .map((link) => document.querySelector<HTMLElement>(link.href))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -52,69 +93,81 @@ export function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={reduced ? false : "hidden"}
-      animate="show"
-      variants={group}
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300",
-        scrolled
-          ? "border-b border-line bg-paper/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
-      )}
-    >
+    <header className="fixed inset-x-0 top-0 z-50">
       <Container>
-        <div className="flex h-16 items-center justify-between md:h-20">
+        {/* Capsule flottante — cadre dans le cadre, type Zynic */}
+        <div
+          className={cn(
+            "nav-reveal mx-auto mt-3 flex max-w-[52rem] items-center justify-between gap-4 rounded-full border px-2.5 py-2 backdrop-blur-md transition-all duration-300 md:mt-4",
+            scrolled
+              ? "border-line bg-surface/95 shadow-[0_12px_32px_rgba(16,16,16,0.10)]"
+              : "border-line/80 bg-surface/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_16px_rgba(16,16,16,0.05)]",
+          )}
+        >
           {/* Monogramme + nom */}
-          <motion.div variants={groupItem}>
-            <Link
-              href="#hero"
-              aria-label="Retour en haut — Nandraina"
-              className="group flex items-center gap-2.5"
-            >
-              <span className="flex size-8 items-center justify-center rounded-md bg-accent font-display text-sm font-bold text-white transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
-                {profile.monogram}
-              </span>
-              <span className="hidden font-display text-base font-semibold tracking-tight text-ink sm:inline">
-                {profile.shortName}
-              </span>
-            </Link>
-          </motion.div>
+          <Link
+            href="#hero"
+            aria-label="Retour en haut — Nandraina"
+            className="group flex items-center gap-2.5 rounded-full"
+          >
+            <span className="flex size-8 items-center justify-center rounded-full bg-accent font-display text-sm font-bold text-white transition-transform duration-300 group-hover:scale-105">
+              {profile.monogram}
+            </span>
+            <span className="hidden font-display text-base font-semibold tracking-tight text-ink sm:inline">
+              {profile.shortName}
+            </span>
+          </Link>
 
           {/* Liens centraux — desktop */}
-          <motion.nav
-            variants={groupItem}
-            className="hidden items-center gap-8 lg:flex"
+          <nav
+            className="hidden items-center gap-6 lg:flex"
             aria-label="Navigation principale"
           >
-            {nav.links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="relative font-mono text-xs uppercase tracking-widest text-inksoft transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-ink after:transition-transform after:duration-300 hover:text-ink hover:after:origin-left hover:after:scale-x-100"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </motion.nav>
+            {nav.links.map((link) => {
+              const isActive = active === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "true" : undefined}
+                  className="group relative py-1 font-mono text-xs uppercase tracking-wide text-inksoft"
+                >
+                  <RollText
+                    label={link.label}
+                    className={cn(
+                      "text-inksoft transition-colors duration-200 group-hover:text-ink",
+                      isActive && "text-ink",
+                    )}
+                  />
+                  <span
+                    aria-hidden
+                    className={cn(
+                      "absolute -bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-ink transition-opacity duration-300",
+                      isActive ? "opacity-100" : "opacity-0",
+                    )}
+                  />
+                </Link>
+              );
+            })}
+          </nav>
 
           {/* CTA + bouton menu mobile */}
-          <div className="flex items-center gap-3">
-            <motion.div variants={groupItem} className="hidden lg:block">
-              <Link
-                href={nav.cta.href}
-                className="group/cta inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-black/85"
-              >
-                {nav.cta.label}
-                <ArrowUpRight
-                  className="size-4 transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
-                  aria-hidden
-                />
-              </Link>
-            </motion.div>
+          <div className="flex items-center gap-2">
+            <Link
+              href={nav.cta.href}
+              className="group hidden items-center gap-2 rounded-full bg-accent py-2.5 pl-5 pr-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-black/85 lg:inline-flex"
+            >
+              <RollText
+                label={nav.cta.label}
+                className="text-sm font-medium text-white"
+              />
+              <ArrowUpRight
+                className="size-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden
+              />
+            </Link>
 
-            <motion.button
-              variants={groupItem}
+            <button
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -122,8 +175,12 @@ export function Navbar() {
               aria-controls="mobile-menu"
               className="flex size-10 items-center justify-center rounded-full border border-line bg-surface text-ink transition-colors duration-200 hover:border-ink lg:hidden"
             >
-              {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
-            </motion.button>
+              {open ? (
+                <X className="size-5" aria-hidden />
+              ) : (
+                <Menu className="size-5" aria-hidden />
+              )}
+            </button>
           </div>
         </div>
       </Container>
@@ -149,7 +206,11 @@ export function Navbar() {
                         initial={reduced ? false : { opacity: 0, y: 24 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 12 }}
-                        transition={{ duration: 0.4, delay: i * 0.05, ease: EASE }}
+                        transition={{
+                          duration: 0.4,
+                          delay: i * 0.05,
+                          ease: EASE,
+                        }}
                         className="border-b border-line"
                       >
                         <Link
@@ -158,7 +219,10 @@ export function Navbar() {
                           className="flex items-center justify-between py-5 font-display text-3xl font-bold tracking-tight text-ink"
                         >
                           {link.label}
-                          <ArrowUpRight className="size-6 text-muted" aria-hidden />
+                          <ArrowUpRight
+                            className="size-6 text-muted"
+                            aria-hidden
+                          />
                         </Link>
                       </motion.div>
                     ))}
@@ -183,6 +247,6 @@ export function Navbar() {
           </AnimatePresence>,
           document.body,
         )}
-    </motion.header>
+    </header>
   );
 }

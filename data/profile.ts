@@ -13,11 +13,13 @@ export interface Profile {
   linkedinHandle: string;
   cvUrl: string;
   hero: {
-    titleLines: string[];
+    availability: string;
+    headline: string;
+    highlight: string;
+    role: string;
     subtitle: string;
     ctaPrimary: { label: string; href: string };
     ctaSecondary: { label: string; href: string };
-    reinforcement: string;
   };
   finalCta: {
     eyebrow: string;
@@ -44,15 +46,14 @@ export const profile: Profile = {
   linkedinHandle: "nadraina22",
   cvUrl: "/cv-nandraina.pdf",
   hero: {
-    titleLines: [
-      "THE Audio Nandraina ",
-      "Développeur Full Stack",
-    ],
-    subtitle:"",
+    availability: "Disponible pour de nouvelles opportunités",
+    headline: "Je conçois des produits qui tiennent en production",
+    highlight: "tiennent en production",
+    role: "THE Audio Nandraina · Full Stack Developer",
+    subtitle:
+      "Interfaces web, backend industrialisé (Docker, Kubernetes, CI/CD) et IA intégrée — de la première ligne de code jusqu'au déploiement en production.",
     ctaPrimary: { label: "Voir mes projets", href: "#work" },
     ctaSecondary: { label: "Télécharger mon CV", href: "/cv-nandraina.pdf" },
-    reinforcement:
-      "Étudiant en dernière année à l'ISPM, déjà en production sur des projets réels. Discutons de votre besoin.",
   },
   finalCta: {
     eyebrow: "Travaillons ensemble",
