@@ -80,17 +80,13 @@ export function Method() {
         <div ref={listRef} className="mt-16 flex flex-col gap-16 md:mt-24 md:gap-24">
           {methodSection.steps.map((step, i) => {
             const Icon = ICONS[step.icon] ?? Code2;
-            const centered = i === methodSection.steps.length - 1;
             const visualOnLeft = i % 2 === 1;
 
             return (
               <div
                 key={step.id}
                 data-step={i}
-                className={cn(
-                  "grid items-center gap-10 lg:grid-cols-2 lg:gap-20",
-                  centered && "lg:mx-auto lg:max-w-4xl lg:gap-16",
-                )}
+                className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20"
               >
                 {/* Contenu */}
                 <div
@@ -98,7 +94,6 @@ export function Method() {
                   className={cn(
                     "order-1",
                     visualOnLeft && "lg:order-2",
-                    centered && "lg:order-1",
                   )}
                 >
                   <span className="font-mono text-xs uppercase tracking-widest text-muted">
@@ -119,13 +114,11 @@ export function Method() {
                   className={cn(
                     "order-2",
                     visualOnLeft && "lg:order-1",
-                    centered && "lg:order-2",
                   )}
                 >
                   <div
                     className={cn(
                       "relative ml-auto flex aspect-[4/3] w-full max-w-[520px] items-center justify-center overflow-hidden rounded-2xl border border-line bg-mist lg:aspect-[5/4]",
-                      centered && "lg:aspect-square lg:max-w-[300px]",
                     )}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.04] to-transparent" aria-hidden />
