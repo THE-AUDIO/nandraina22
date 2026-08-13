@@ -1,0 +1,89 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+endobj
+6 0 obj
+<< /Length 4153 >>
+stream
+BT /F2 26 Tf 0 g 64.0 764.0 Td (THE AUDIO NANDRAINA) Tj ET
+BT /F1 13 Tf 0.35 g 64.0 742.0 Td (Developpeur Full Stack | AI) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 730.0 Td (Angular - Spring Boot - FastAPI - Docker - Kubernetes - CI/CD - IA) Tj ET
+BT /F1 9 Tf 0.35 g 64.0 716.0 Td (nandraina.dev22@gmail.com  |  +261 34 26 450 77  |  Antananarivo, Madagascar) Tj ET
+64.0 712.0 m 531.0 712.0 l S
+BT /F2 11 Tf 0 g 64.0 678.0 Td (PROFIL) Tj ET
+64.0 675.0 m 531.0 675.0 l S
+BT /F1 9.5 Tf 0 g 64.0 634.5 Td (Developpeur Full Stack specialise Angular, Spring Boot et FastAPI. Je concois des experiences) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 621.0 Td (UX/UI modernes, je les industrialise avec Docker, Kubernetes et des pipelines CI/CD, et j'integre) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 607.5 Td (l'IA dans mes workflows pour aller plus vite sans sacrifier la qualite. Etudiant en derniere annee) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 594.0 Td (a l'ISPM, deja en production sur des projets reels.) Tj ET
+BT /F2 11 Tf 0 g 64.0 554.0 Td (EXPERIENCE) Tj ET
+64.0 551.0 m 531.0 551.0 l S
+BT /F1 9 Tf 0.35 g 451.4 518.0 Td (09/2025 - 11/2025) Tj ET
+BT /F2 10 Tf 0 g 64.0 504.0 Td (Developpeur Stagiaire - Connecteo) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 491.0 Td (Dashboard de suivi d'activites, initiation aux pipelines CI/CD, decouverte de Citus \(PostgreSQL) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 478.0 Td (distribue\).) Tj ET
+BT /F1 9 Tf 0.35 g 451.4 478.0 Td (11/2024 - 01/2025) Tj ET
+BT /F2 10 Tf 0 g 64.0 464.0 Td (Developpeur React Native - RanDevTeam) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 451.0 Td (App mobile e-commerce : fiches produits, panier, commande, debug des flux critiques, mise a jour) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 438.0 Td (des composants UI.) Tj ET
+BT /F1 9 Tf 0.35 g 451.4 438.0 Td (02/2024 - 03/2024) Tj ET
+BT /F2 10 Tf 0 g 64.0 424.0 Td (Developpeur JavaScript - NextRocket \(Freelance\)) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 411.0 Td (Automatisation de web scraping et developpement d'UI front-end pour un client.) Tj ET
+BT /F2 11 Tf 0 g 64.0 371.0 Td (FORMATION) Tj ET
+64.0 368.0 m 531.0 368.0 l S
+BT /F1 9 Tf 0.35 g 432.7 335.0 Td (12/2022 - aujourd'hui) Tj ET
+BT /F2 10 Tf 0 g 64.0 321.0 Td (Licence en Informatique - ISPM) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 308.0 Td (Derniere annee. Projets reels en production.) Tj ET
+BT /F1 9 Tf 0.35 g 451.4 308.0 Td (11/2021 - 09/2022) Tj ET
+BT /F2 10 Tf 0 g 64.0 294.0 Td (Annee preparatoire - SESAME) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 281.0 Td (Fondations scientifiques et techniques.) Tj ET
+BT /F2 11 Tf 0 g 64.0 243.0 Td (COMPETENCES) Tj ET
+64.0 240.0 m 531.0 240.0 l S
+BT /F1 9.5 Tf 0 g 64.0 196.0 Td (Frontend :  Angular, TypeScript, RxJS, React Native, Tailwind CSS) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 183.0 Td (Backend :  Spring Boot, Java, Spring Security, FastAPI, Pydantic, OpenAPI) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 170.0 Td (DevOps & CI/CD :  Docker, Kubernetes, Helm, GitHub Actions, SonarQube, Ansible) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 157.0 Td (Bases de donnees :  PostgreSQL, MySQL, Citus) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 144.0 Td (Data & IA :  scikit-learn, Matplotlib, seaborn, RAG, LLM) Tj ET
+BT /F2 11 Tf 0 g 64.0 106.0 Td (DISTINCTIONS) Tj ET
+64.0 103.0 m 531.0 103.0 l S
+BT /F1 9 Tf 0.35 g 512.3 72.0 Td (2025) Tj ET
+BT /F2 10 Tf 0 g 64.0 58.0 Td (Stupid Hackathon - Gagnant) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 45.0 Td (Projet selectionne devant jury : creativite technique et execution rapide.) Tj ET
+BT /F1 9 Tf 0.35 g 512.3 45.0 Td (2024) Tj ET
+BT /F2 10 Tf 0 g 64.0 31.0 Td (DevFest 2024 - Gagnant du Coding Challenge) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 18.0 Td (Challenge de code en temps limite.) Tj ET
+BT /F1 9 Tf 0.35 g 512.3 18.0 Td (2022) Tj ET
+BT /F2 10 Tf 0 g 64.0 4.0 Td (HiU ISPM - Participation) Tj ET
+BT /F1 9.5 Tf 0.35 g 64.0 -9.0 Td (Premiere competition tech.) Tj ET
+BT /F2 11 Tf 0 g 64.0 -47.0 Td (CONTACT) Tj ET
+64.0 -50.0 m 531.0 -50.0 l S
+BT /F1 9.5 Tf 0 g 64.0 -94.0 Td (Email : nandraina.dev22@gmail.com) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 -107.0 Td (Telephone : +261 34 26 450 77) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 -120.0 Td (GitHub : github.com/THE-AUDIO) Tj ET
+BT /F1 9.5 Tf 0 g 64.0 -133.0 Td (LinkedIn : linkedin.com/in/nadraina22) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 0000000009 00000 n 0000000065 00000 n 0000000129 00000 n 0000000233 00000 n 0000000342 00000 n 0000000485 00000 n trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4690
+%%EOF
