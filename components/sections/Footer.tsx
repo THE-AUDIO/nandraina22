@@ -50,7 +50,7 @@ export function Footer() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-[-4%] select-none text-center font-display text-[20vw] font-bold leading-none tracking-tighter text-white/[0.03]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 md:bottom-[-4%] select-none text-center font-display text-[20vw] font-bold leading-none tracking-tighter text-white/[0.03]"
       >
         <span
           className={

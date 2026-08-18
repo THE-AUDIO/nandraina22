@@ -21,7 +21,7 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-[-4%] select-none text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-ink/[0.08]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 md:bottom-[-4%] select-none text-center font-display text-[18vw] font-bold leading-none tracking-tighter text-ink/[0.08]"
       >
         <span
           className={
@@ -58,7 +58,7 @@ export function Hero() {
 
           {/* Sous-titre */}
           <p
-            className="hero-reveal mt-6 w-2/3 text-base leading-relaxed text-inksoft md:text-lg"
+            className="hero-reveal mt-6  md:w-2/3 text-base leading-relaxed text-inksoft md:text-lg"
             style={{ animationDelay: REVEAL_DELAYS[3] }}
           >
             {hero.subtitle}
