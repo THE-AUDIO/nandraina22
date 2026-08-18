@@ -17,9 +17,13 @@ export const educationSection: EducationSection = {
     {
       id: "ispm",
       degree: "Licence en Informatique",
-      school: "ISPM",
+      school: "ISPM — Institut Supérieur Polytechnique de Madagascar",
       period: { start: "12/2022", end: "Aujourd'hui" },
-      details: ["Dernière année", "Projets réels en production"],
+      details: [
+        "Dernière année",
+        "Mémoire : PoC pipeline CI/CD staging/production",
+        "Projets réels déployés en production",
+      ],
     },
     {
       id: "sesame",

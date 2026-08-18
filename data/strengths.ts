@@ -23,7 +23,7 @@ export const strengthsSection: StrengthsSection = {
       icon: "Layers",
       title: "Développement Full Stack",
       description:
-        "Angular / Spring Boot / FastAPI — de l'interface au service, en passant par la donnée.",
+        "Angular, TypeScript, React, Next.js côté frontend. Spring Boot (Java) et FastAPI (Python) côté backend. APIs REST, bases de données PostgreSQL et MySQL, du premier wireframe au déploiement.",
       tone: "indigo",
     },
     {
@@ -31,7 +31,7 @@ export const strengthsSection: StrengthsSection = {
       icon: "Container",
       title: "DevOps & Conteneurisation",
       description:
-        "Docker, Kubernetes, Helm, CI/CD — industrialiser et déployer sans friction.",
+        "Docker, Kubernetes, Helm pour la conteneurisation. GitHub Actions et Ansible pour les pipelines CI/CD. SonarQube pour la qualité de code. Je déploie en staging puis en production de façon automatisée.",
       tone: "emerald",
     },
     {
@@ -39,7 +39,7 @@ export const strengthsSection: StrengthsSection = {
       icon: "BrainCircuit",
       title: "Data & IA",
       description:
-        "scikit-learn, Matplotlib, intégration LLM — transformer la donnée en décisions.",
+        "scikit-learn, Matplotlib pour l'analyse de données. LangChain, RAG et LLM pour l'intégration d'IA dans des produits réels — comme FeoSync (génération de contenu) et un assistant documentaire.",
       tone: "amber",
     },
     {
@@ -47,7 +47,7 @@ export const strengthsSection: StrengthsSection = {
       icon: "MousePointerClick",
       title: "UX/UI centré utilisateur",
       description:
-        "Des interfaces pensées pour l'usage réel, validées par des principes de design.",
+        "Interfaces Angular et React pensées pour l'usage réel. Conception d'APIs documentées (OpenAPI/FastAPI) et de dashboards intuitifs (suivi d'activités chez Connecteo).",
       tone: "rose",
     },
   ],

@@ -19,27 +19,131 @@ const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const SITE_URL = "https://nandraina.dev";
+
 export const metadata: Metadata = {
-  title: "Nandraina — Développeur Full Stack | AI",
+  title: "Nandraina — Développeur Full Stack & DevOps | AI",
   description:
-    "Développeur Full Stack qui conçoit, code et déploie — de l'UI à la CI/CD. Angular, Spring Boot, FastAPI, Docker, Kubernetes, IA.",
-  metadataBase: new URL("https://nandraina.dev"),
+    "THE Audio Nandraina, développeur Full Stack et DevOps à Antananarivo, Madagascar. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA — du prototype à la production.",
+  keywords: [
+    "développeur full stack",
+    "developer portfolio",
+    "Angular",
+    "Spring Boot",
+    "FastAPI",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "GitHub Actions",
+    "TypeScript",
+    "Python",
+    "Java",
+    "PostgreSQL",
+    "DevOps",
+    "intelligents artificielle",
+    "RAG",
+    "LLM",
+    "Madagascar",
+    "Antananarivo",
+  ],
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
-    title: "Nandraina — Développeur Full Stack | AI",
+    title: "Nandraina — Développeur Full Stack & DevOps | AI",
     description:
-      "Développeur Full Stack qui conçoit, code et déploie — de l'UI à la CI/CD.",
+      "Développeur Full Stack et DevOps — du prototype à la production. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA.",
     type: "website",
     locale: "fr_FR",
+    url: SITE_URL,
+    siteName: "Nandraina — Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nandraina — Développeur Full Stack | AI",
+    title: "Nandraina — Développeur Full Stack & DevOps | AI",
     description:
-      "Développeur Full Stack qui conçoit, code et déploie — de l'UI à la CI/CD.",
+      "Développeur Full Stack et DevOps — du prototype à la production. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA.",
+    images: [`${SITE_URL}/og-image.png`],
   },
   icons: {
     icon: "/icon.svg",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "THE Audio Nandraina",
+  alternateName: "Nandraina",
+  jobTitle: "Développeur Full Stack & DevOps",
+  url: SITE_URL,
+  email: "nandraina.dev22@gmail.com",
+  telephone: "+261342645077",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Antananarivo",
+    addressCountry: "MG",
+  },
+  sameAs: [
+    "https://github.com/THE-AUDIO",
+    "https://www.linkedin.com/in/nadraina22",
+  ],
+  knowsAbout: [
+    "Angular",
+    "Spring Boot",
+    "FastAPI",
+    "Docker",
+    "Kubernetes",
+    "Helm",
+    "GitHub Actions",
+    "CI/CD",
+    "Ansible",
+    "TypeScript",
+    "Python",
+    "Java",
+    "PostgreSQL",
+    "MySQL",
+    "scikit-learn",
+    "Matplotlib",
+    "RAG",
+    "LLM",
+    "DevOps",
+    "Développement Full Stack",
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "Licence en Informatique",
+    recognizedBy: {
+      "@type": "EducationalOrganization",
+      name: "ISPM",
+    },
+  },
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "ISPM",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Nandraina — Portfolio",
+  url: SITE_URL,
+  description:
+    "Portfolio de THE Audio Nandraina, développeur Full Stack et DevOps.",
+  inLanguage: "fr",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -48,6 +152,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-paper text-ink">
         {children}
       </body>

@@ -35,7 +35,7 @@ export default function Image() {
             textTransform: "uppercase",
           }}
         >
-          THE Audio Nandraina
+          Nandraina
         </div>
         <div style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.06 }}>
           Développeur Full&nbsp;Stack qui conçoit, code et déploie — de

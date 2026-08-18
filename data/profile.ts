@@ -36,7 +36,8 @@ export const profile: Profile = {
   shortName: "Nandraina",
   monogram: "TA",
   title: "Développeur Full Stack | AI",
-  tagline: "Développeur Full Stack qui conçoit, code et déploie — de l'UI à la CI/CD",
+  tagline:
+    "Développeur Full Stack et DevOps — du prototype à la production avec Angular, Spring Boot, FastAPI, Docker, Kubernetes et IA.",
   location: "Antananarivo, Madagascar",
   email: "nandraina.dev22@gmail.com",
   phone: "+261 34 26 450 77",
@@ -51,7 +52,7 @@ export const profile: Profile = {
     highlight: "tiennent en production",
     role: "THE Audio Nandraina · Full Stack Developer",
     subtitle:
-      "Interfaces web, backend industrialisé (Docker, Kubernetes, CI/CD) et IA intégrée — de la première ligne de code jusqu'au déploiement en production.",
+      "Développeur Full Stack et DevOps basé à Antananarivo, Madagascar. Je développe des applications web (Angular, Next.js), des APIs (Spring Boot, FastAPI), des pipelines CI/CD (Docker, Kubernetes, GitHub Actions) et j'intègre de l'IA (RAG, LLM) — de la première ligne de code jusqu'au déploiement en production.",
     ctaPrimary: { label: "Voir mes projets", href: "#work" },
     ctaSecondary: { label: "Télécharger mon CV", href: "/cv-nandraina.pdf" },
   },
@@ -63,6 +64,6 @@ export const profile: Profile = {
     ctaPrimary: { label: "Me contacter", href: "mailto:nandraina.dev22@gmail.com" },
     ctaSecondary: { label: "Voir mes projets", href: "#work" },
     reinforcement:
-      "Étudiant en dernière année à l'ISPM, déjà en production sur des projets réels.",
+      "Étudiant en dernière année de Licence Informatique à l'ISPM, avec 3 expériences en stage et freelance et 2 victoires en hackathon.",
   },
 };

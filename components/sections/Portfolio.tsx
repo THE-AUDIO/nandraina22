@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -20,11 +21,13 @@ function ProjectVisual({ project }: { project: Project }) {
   if (project.image) {
     return (
       <div className="relative aspect-[4/3] w-full bg-mist lg:aspect-[16/10]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={project.image.src}
           alt={project.image.alt}
-          className="h-full w-full object-cover"
+          fill
+          sizes="(max-width: 1024px) 85vw, (max-width: 1280px) 56vw, 46vw"
+          className="object-cover"
+          loading="lazy"
         />
       </div>
     );

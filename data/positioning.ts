@@ -16,22 +16,22 @@ export const positioningSection: PositioningSection = {
   items: [
     {
       id: "autonomie",
-      point: "Autonomie du besoin à la prod",
+      point: "Autonomie du besoin à la production",
       contrast: "vs code seul",
     },
     {
       id: "devops",
-      point: "Culture DevOps dès le début de carrière",
+      point: "Docker, K8s, CI/CD dès la première année de carrière",
       contrast: "vs découverte tardive",
     },
     {
       id: "ia",
-      point: "Intégration IA dans le workflow quotidien",
+      point: "IA intégrée en produit (FeoSync, RAG) — pas juste en démo",
       contrast: "vs usage ponctuel",
     },
     {
       id: "adaptabilite",
-      point: "Adaptabilité démontrée par la diversité des missions",
+      point: "5 projets sur 4 stacks différents en 2 ans",
       contrast: "vs parcours linéaire",
     },
   ],

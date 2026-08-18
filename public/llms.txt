@@ -1,0 +1,38 @@
+# THE Audio Nandraina (Nandraina)
+
+Développeur Full Stack et DevOps basé à Antananarivo, Madagascar. Étudiant en dernière année de Licence en Informatique à l'ISPM.
+
+## Compétences principales
+
+- **Frontend:** Angular, TypeScript, React, Next.js
+- **Backend:** Spring Boot, Java, FastAPI, Python
+- **DevOps:** Docker, Kubernetes, Helm, GitHub Actions, Ansible, CI/CD
+- **Bases de données:** PostgreSQL, MySQL, Citus
+- **IA & Data:** scikit-learn, Matplotlib, LangChain, RAG, LLM
+
+## Projets clés
+
+- **FeoSync** — SaaS multi-tenant de planification de posts et génération de contenu IA. Stack: FastAPI, Next.js, Kubernetes, PostgreSQL.
+- **Assistant RAG documentaire** — Assistant IA indexant la documentation d'infrastructure pour répondre en langage naturel. Stack: FastAPI, Angular, LangChain, PostgreSQL.
+- **Pipeline CI/CD** — PoC de mémoire de fin d'études : build, tests, SonarQube, conteneurisation, déploiement automatisé staging/production. Stack: GitHub Actions, SonarQube, Docker, Ansible.
+- **App e-commerce mobile** — Application React Native : fiches produits, panier, parcours de commande.
+- **Dashboard de suivi d'activités** — Tableau de bord en stage chez Connecteo avec PostgreSQL distribué (Citus).
+
+## Expériences
+
+- **Connecteo** — Développeur stagiaire (2025). Dashboard d'activités, initiation CI/CD, Citus.
+- **RanDevTeam** — Développeur React Native (2024-2025). App e-commerce mobile, debug flux critiques.
+- **NextRocket** — Développeur JavaScript freelance (2024). Web scraping, UI front-end.
+
+## Distinctions
+
+- Gagnant du Stupid Hackathon 2025
+- Gagnant du Coding Challenge DevFest 2024
+
+## Contact
+
+- Site: https://nandraina.dev
+- Email: nandraina.dev22@gmail.com
+- GitHub: https://github.com/THE-AUDIO
+- LinkedIn: https://www.linkedin.com/in/nadraina22
+- CV: https://nandraina.dev/cv-nandraina.pdf
