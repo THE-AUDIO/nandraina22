@@ -42,7 +42,10 @@ export const projects: Project[] = [
     stack: ["FastAPI", "Next.js", "Kubernetes", "PostgreSQL"],
     metrics: ["Multi-tenant", "Planification", "Génération IA"],
     href: undefined,
-    image: undefined,
+    image: {
+      src: "/projets/feosync.png",
+      alt: "FeoSync - SaaS de planification de posts",
+    },
     featured: true,
   },
   {
@@ -57,7 +60,11 @@ export const projects: Project[] = [
     stack: ["FastAPI", "Angular", "LangChain", "PostgreSQL"],
     metrics: ["Indexation doc", "Q&A natif"],
     href: undefined,
-    image: undefined,
+    image: {
+      src: "/projets/rag-doc.png",
+      alt: "Assistant RAG documentaire",
+    },
+    featured: true,
   },
   {
     id: "pipeline-cicd",
