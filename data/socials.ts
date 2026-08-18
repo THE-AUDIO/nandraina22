@@ -41,7 +41,7 @@ export const socialsSection: SocialsSection = {
       id: "portfolio",
       platform: "globe",
       label: "Portfolio",
-      handle: "nandraina.dev",
+      handle: "nandraina22.vercel.app",
       href: "#",
     },
   ],

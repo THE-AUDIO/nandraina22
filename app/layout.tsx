@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
 import "lenis/dist/lenis.css";
 import "./globals.css";
+import { SITE_URL } from "@/lib/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,6 @@ const syne = Syne({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
-
-const SITE_URL = "https://nandraina.dev";
 
 export const metadata: Metadata = {
   title: "Nandraina — Développeur Full Stack & DevOps | AI",

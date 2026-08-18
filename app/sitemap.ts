@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://nandraina.dev";
+import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,

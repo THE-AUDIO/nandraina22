@@ -31,8 +31,8 @@ Développeur Full Stack et DevOps basé à Antananarivo, Madagascar. Étudiant e
 
 ## Contact
 
-- Site: https://nandraina.dev
+- Site: https://nandraina22.vercel.app
 - Email: nandraina.dev22@gmail.com
 - GitHub: https://github.com/THE-AUDIO
 - LinkedIn: https://www.linkedin.com/in/nadraina22
-- CV: https://nandraina.dev/cv-nandraina.pdf
+- CV: https://nandraina22.vercel.app/cv-nandraina.pdf

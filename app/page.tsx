@@ -16,8 +16,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 import { projects } from "@/data/projects";
-
-const SITE_URL = "https://nandraina.dev";
+import { SITE_URL } from "@/lib/constants";
 
 const projectJsonLd = projects
   .filter((p) => p.featured)
