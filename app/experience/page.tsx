@@ -27,6 +27,7 @@ export default function ExperiencePage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Expérience de Nandraina — Parcours développeur Full Stack & DevOps</h1>
         <Experiences />
         <Education />
       </main>

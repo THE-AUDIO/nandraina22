@@ -83,6 +83,7 @@ export default function DevOpsPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Expertise DevOps & Infrastructure de Nandraina</h1>
         {/* Hero section */}
         <section className="bg-paper py-24 md:py-32">
           <Container>

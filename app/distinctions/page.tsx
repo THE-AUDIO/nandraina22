@@ -26,6 +26,7 @@ export default function DistinctionsPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Distinctions de Nandraina — Récompenses & certifications</h1>
         <Distinctions />
       </main>
       <Footer />

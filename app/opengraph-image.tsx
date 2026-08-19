@@ -126,7 +126,7 @@ export default function Image() {
           }}
         >
           {["Angular", "Spring Boot", "FastAPI", "Docker", "Kubernetes", "IA"].map(
-            (tech, i) => (
+            (tech) => (
               <div
                 key={tech}
                 style={{

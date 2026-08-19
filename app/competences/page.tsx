@@ -27,6 +27,7 @@ export default function CompetencesPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Compétences de Nandraina — Stack technique Full Stack & DevOps</h1>
         <MarqueeStack />
         <Stack />
       </main>

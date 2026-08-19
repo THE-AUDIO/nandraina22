@@ -26,6 +26,7 @@ export default function ProjetsPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Projets de Nandraina — Applications web & DevOps</h1>
         <Portfolio />
       </main>
       <Footer />

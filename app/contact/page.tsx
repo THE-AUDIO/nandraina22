@@ -28,6 +28,7 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">Contact — Me contacter pour vos projets</h1>
         <Socials />
         <FAQ />
         <FinalCTA />

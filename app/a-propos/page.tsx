@@ -29,6 +29,7 @@ export default function AProposPage() {
     <>
       <Navbar />
       <main>
+        <h1 className="sr-only">À propos de Nandraina — Méthode, atouts & positionnement</h1>
         <Method />
         <Strengths />
         <Positioning />
