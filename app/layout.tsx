@@ -61,13 +61,14 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE_URL,
     siteName: "Nandraina — Portfolio",
+    images: [`${SITE_URL}/opengraph-image.png`],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nandraina — Développeur Fullstack & DevOps à Antananarivo, Madagascar",
     description:
       "Développeur Fullstack & DevOps à Antananarivo, Madagascar. Applications web, APIs, Docker, Kubernetes et CI/CD.",
-    images: [`${SITE_URL}/og-image.png`],
+    images: [`${SITE_URL}/opengraph-image.png`],
   },
   icons: {
     icon: "/icon.svg",
