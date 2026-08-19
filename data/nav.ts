@@ -10,11 +10,11 @@ export interface NavConfig {
 
 export const nav: NavConfig = {
   links: [
-    { label: "Work", href: "#work" },
-    { label: "Stack", href: "#stack" },
-    { label: "Expérience", href: "#experience" },
-    { label: "Distinctions", href: "#awards" },
-    { label: "Contact", href: "#contact" },
+    { label: "Projets", href: "/#work" },
+    { label: "Compétences", href: "/#stack" },
+    { label: "Expérience", href: "/#experience" },
+    { label: "Distinctions", href: "/#awards" },
+    { label: "Contact", href: "/#contact" },
   ],
-  cta: { label: "Me contacter", href: "#contact" },
+  cta: { label: "Me contacter", href: "/#contact" },
 };

@@ -62,7 +62,10 @@ export function Navbar() {
   // Scrollspy : met en surbrillance la section courante.
   useEffect(() => {
     const sections = nav.links
-      .map((link) => document.querySelector<HTMLElement>(link.href))
+      .map((link) => {
+        const hash = link.href.startsWith("/#") ? link.href.slice(1) : link.href;
+        return document.querySelector<HTMLElement>(hash);
+      })
       .filter((el): el is HTMLElement => Boolean(el));
 
     const observer = new IntersectionObserver(
@@ -115,7 +118,7 @@ export function Navbar() {
         >
           {/* Monogramme + nom */}
           <Link
-            href="#hero"
+            href="/#hero"
             aria-label="Retour en haut — Nandraina"
             className="group flex items-center gap-2.5 rounded-full"
           >
@@ -133,7 +136,8 @@ export function Navbar() {
             aria-label="Navigation principale"
           >
             {nav.links.map((link) => {
-              const isActive = active === link.href;
+              const hash = link.href.startsWith("/#") ? link.href.slice(1) : link.href;
+              const isActive = active === hash;
               return (
                 <Link
                   key={link.href}

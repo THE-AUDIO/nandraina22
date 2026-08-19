@@ -21,13 +21,17 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Nandraina — Développeur Full Stack & DevOps | AI",
+  title: "Nandraina — Développeur Fullstack & DevOps à Antananarivo, Madagascar",
   description:
-    "THE Audio Nandraina, développeur Full Stack et DevOps à Antananarivo, Madagascar. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA — du prototype à la production.",
+    "Développeur Fullstack & DevOps basé à Antananarivo, Madagascar. Angular, Next.js, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA — du prototype à la production.",
   keywords: [
-    "développeur full stack",
+    "développeur fullstack",
+    "développeur fullstack Antananarivo",
+    "développeur fullstack Madagascar",
+    "développeur DevOps Madagascar",
     "developer portfolio",
     "Angular",
+    "Next.js",
     "Spring Boot",
     "FastAPI",
     "Docker",
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Nandraina — Développeur Full Stack & DevOps | AI",
+    title: "Nandraina — Développeur Fullstack & DevOps à Antananarivo, Madagascar",
     description:
-      "Développeur Full Stack et DevOps — du prototype à la production. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA.",
+      "Développeur Fullstack & DevOps à Antananarivo, Madagascar. Applications web, APIs, Docker, Kubernetes et CI/CD.",
     type: "website",
     locale: "fr_FR",
     url: SITE_URL,
@@ -60,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nandraina — Développeur Full Stack & DevOps | AI",
+    title: "Nandraina — Développeur Fullstack & DevOps à Antananarivo, Madagascar",
     description:
-      "Développeur Full Stack et DevOps — du prototype à la production. Angular, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA.",
+      "Développeur Fullstack & DevOps à Antananarivo, Madagascar. Applications web, APIs, Docker, Kubernetes et CI/CD.",
     images: [`${SITE_URL}/og-image.png`],
   },
   icons: {
@@ -89,7 +93,7 @@ const jsonLd = {
   "@type": "Person",
   name: "THE Audio Nandraina",
   alternateName: "Nandraina",
-  jobTitle: "Développeur Full Stack & DevOps",
+  jobTitle: "Développeur Fullstack & DevOps",
   url: SITE_URL,
   email: "nandraina.dev22@gmail.com",
   telephone: "+261342645077",

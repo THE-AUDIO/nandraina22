@@ -48,11 +48,11 @@ export const profile: Profile = {
   cvUrl: "/cv-nandraina.pdf",
   hero: {
     availability: "Disponible pour de nouvelles opportunités",
-    headline: "Je conçois des produits qui tiennent en production",
-    highlight: "tiennent en production",
-    role: "THE Audio Nandraina · Full Stack Developer",
+    headline: "Je conçois des applications qui fonctionnent en production",
+    highlight: "fonctionnent en production",
+    role: "THE Audio Nandraina · Développeur Fullstack & DevOps",
     subtitle:
-      "Développeur Full Stack et DevOps basé à Antananarivo, Madagascar. Je développe des applications web (Angular, Next.js), des APIs (Spring Boot, FastAPI), des pipelines CI/CD (Docker, Kubernetes, GitHub Actions) et j'intègre de l'IA (RAG, LLM) — de la première ligne de code jusqu'au déploiement en production.",
+      "Développeur Fullstack & DevOps basé à Antananarivo, Madagascar. Je conçois des applications web avec Angular et Next.js, des APIs performantes avec Spring Boot et FastAPI, et j'automatise leur mise en production avec Docker, Kubernetes et des pipelines CI/CD — du premier commit au déploiement.",
     ctaPrimary: { label: "Voir mes projets", href: "#work" },
     ctaSecondary: { label: "Télécharger mon CV", href: "/cv-nandraina.pdf" },
   },

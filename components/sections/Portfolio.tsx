@@ -221,7 +221,7 @@ export function Portfolio() {
         <div className="flex items-end justify-between gap-8">
           <SectionHeading
             eyebrow="Work"
-            title="Une sélection de projets, du prototype à la prod"
+            title="Une sélection de projets"
           />
           <p className="hidden shrink-0 pb-2 font-mono text-[10px] uppercase tracking-widest text-muted lg:block">
             Scroll ↓ pour explorer
