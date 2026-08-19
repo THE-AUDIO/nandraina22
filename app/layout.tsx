@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     "Développeur Fullstack & DevOps basé à Antananarivo, Madagascar. Angular, Next.js, Spring Boot, FastAPI, Docker, Kubernetes, CI/CD et IA — du prototype à la production.",
   keywords: [
     "développeur fullstack",
+    "Jeune développeur fullstack",
     "développeur fullstack Antananarivo",
     "développeur fullstack Madagascar",
     "développeur DevOps Madagascar",
