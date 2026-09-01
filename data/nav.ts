@@ -16,5 +16,5 @@ export const nav: NavConfig = {
     { label: "Distinctions", href: "/#awards" },
     { label: "Contact", href: "/#contact" },
   ],
-  cta: { label: "Me contacter", href: "/#contact" },
+  cta: { label: "Me contacter", href: "mailto:nandraina.dev22@gmail.com" },
 };

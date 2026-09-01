@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "light" | "ghostLight";
@@ -10,6 +10,7 @@ interface ButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
   href: string;
   variant?: ButtonVariant;
   icon?: boolean;
+  loading?: boolean;
   children: React.ReactNode;
 }
 
@@ -31,6 +32,7 @@ export function Button({
   href,
   variant = "primary",
   icon = true,
+  loading = false,
   children,
   className,
   ...props
@@ -42,11 +44,18 @@ export function Button({
       {...props}
     >
       {children}
-      {icon && (
-        <ArrowUpRight
-          className="size-4 transition-transform duration-300 group-hover/btn:translate-x-[2px] group-hover/btn:-translate-y-[2px]"
+      {loading ? (
+        <Loader2
+          className="size-4 animate-spin"
           aria-hidden
         />
+      ) : (
+        icon && (
+          <ArrowUpRight
+            className="size-4 transition-transform duration-300 group-hover/btn:translate-x-[2px] group-hover/btn:-translate-y-[2px]"
+            aria-hidden
+          />
+        )
       )}
     </Link>
   );

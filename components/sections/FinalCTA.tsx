@@ -1,13 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useRouter } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/data/profile";
 import { EASE } from "@/lib/animations";
+import { useMailtoLoading } from "@/lib/hooks/useMailtoLoading";
 
 export function FinalCTA() {
   const cta = profile.finalCta;
+  const router = useRouter();
+  const { loading, handleClick } = useMailtoLoading({
+    onFallback: () => router.push("/contact"),
+  });
 
   return (
     <section
@@ -61,7 +67,12 @@ export function FinalCTA() {
             variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } }}
             transition={{ duration: 0.55, ease: EASE }}
           >
-            <Button href={cta.ctaPrimary.href} variant="light">
+            <Button
+              href={cta.ctaPrimary.href}
+              variant="light"
+              loading={loading}
+              onClick={handleClick}
+            >
               {cta.ctaPrimary.label}
             </Button>
           </motion.div>

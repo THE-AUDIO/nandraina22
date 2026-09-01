@@ -8,14 +8,16 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "motion/react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Loader2, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { nav } from "@/data/nav";
 import { profile } from "@/data/profile";
 import { EASE, useReducedMotion } from "@/lib/animations";
 import { getLenis } from "@/lib/animations/lenis";
 import { cn } from "@/lib/utils";
+import { useMailtoLoading } from "@/lib/hooks/useMailtoLoading";
 
 /** Texte à double couche : swap vertical au survol (signature Zynic). */
 function RollText({
@@ -54,6 +56,14 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const { scrollY } = useScroll();
+  const router = useRouter();
+  const { loading: mailtoLoading, handleClick: handleMailtoClick } =
+    useMailtoLoading({
+      onFallback: () => {
+        setOpen(false);
+        router.push("/contact");
+      },
+    });
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 16);
@@ -168,16 +178,24 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <Link
               href={nav.cta.href}
+              onClick={handleMailtoClick}
               className="group hidden items-center gap-2 rounded-full bg-accent py-2.5 pl-5 pr-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-black/85 lg:inline-flex"
             >
               <RollText
                 label={nav.cta.label}
                 className="text-sm font-medium text-white"
               />
-              <ArrowUpRight
-                className="size-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                aria-hidden
-              />
+              {mailtoLoading ? (
+                <Loader2
+                  className="size-4 animate-spin text-white"
+                  aria-hidden
+                />
+              ) : (
+                <ArrowUpRight
+                  className="size-4 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  aria-hidden
+                />
+              )}
             </Link>
 
             <button
@@ -245,11 +263,15 @@ export function Navbar() {
                 <div className="border-t border-line px-6 py-8">
                   <Link
                     href={nav.cta.href}
-                    onClick={() => setOpen(false)}
+                    onClick={handleMailtoClick}
                     className="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-4 text-sm font-medium text-white"
                   >
                     {nav.cta.label}
-                    <ArrowUpRight className="size-4" aria-hidden />
+                    {mailtoLoading ? (
+                      <Loader2 className="size-4 animate-spin" aria-hidden />
+                    ) : (
+                      <ArrowUpRight className="size-4" aria-hidden />
+                    )}
                   </Link>
                   <p className="mt-6 text-center font-mono text-xs tracking-wide text-muted">
                     {profile.email} · {profile.location}
