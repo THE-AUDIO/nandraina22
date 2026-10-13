@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "SaaS multi-tenant de planification de posts et de génération de contenu IA. J'ai conçu l'architecture conteneurisée (Kubernetes), développé l'API FastAPI et l'interface Next.js. Le système gère la planification de contenu, la génération assistée par IA et le multi-tenant avec PostgreSQL.",
     stack: ["FastAPI", "Next.js", "Kubernetes", "PostgreSQL"],
     metrics: ["Multi-tenant", "Planification", "Génération IA"],
-    href: undefined,
+    href: "https://feosync.com/",
     image: {
       src: "/projets/feosync.png",
       alt: "Interface du SaaS FeoSync montrant le tableau de bord de planification de posts avec génération de contenu IA",
